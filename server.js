@@ -21,5 +21,26 @@ app.get('/',function(req,res){
   res.send('Hi there! Hope you are doing great. Go ahead and explore the API, it is available at http://localhost:'+ port + '/api');
 });
 
+
+app.get('/setup',function(req,res){
+  //sample user
+  var sampleUser = new User({
+    name:'Santosh Bidve',
+    password: 'password',
+    admin: true
+  });
+
+  //save user
+  sampleUser.save(function(err){
+      if(err) throw err;
+      console.log('user saved sucessfully');
+      res.json({success:true});
+  });
+
+});
+
+
+
+//start server
 app.listen(port);
 console.log('Server running at http://localhost:' + port);
