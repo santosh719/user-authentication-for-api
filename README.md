@@ -31,7 +31,7 @@ http://localhost:8080/setup
 
 From the root folder of the project, you can run the application with: 
 ```
-node app.js
+node server.js
 ```
 You can then access the application on `http://localhost:8080`.
 
@@ -70,4 +70,3 @@ Thanks!
 
 Author: [Santosh Bidve](http://santoshb.me)
 
-License: The MIT License (MIT)
